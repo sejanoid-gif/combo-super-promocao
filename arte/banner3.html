@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<style>
+@import url('../assets/fonts.css');
+:root{--lar:#D97757;--vivo:#FF7A3D;--creme:#EBE4D4}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#000;font-family:"Inter",sans-serif;color:var(--creme)}
+.arte{position:relative;overflow:hidden;background:
+ radial-gradient(55% 80% at 80% 50%,rgba(255,122,61,.42) 0%,rgba(217,119,87,.12) 50%,transparent 72%),
+ repeating-linear-gradient(115deg,rgba(255,255,255,.035) 0 38px,transparent 38px 90px),#050505}
+.d{width:1600px;height:760px}
+.m{width:900px;height:1560px}
+.raio{position:absolute;filter:drop-shadow(0 0 22px rgba(255,122,61,.8))}
+.sel{display:inline-flex;align-items:center;gap:12px;background:var(--vivo);color:#000;font-weight:900;letter-spacing:.1em;text-transform:uppercase;border-radius:12px;padding:12px 22px 12px 14px;box-shadow:0 10px 30px rgba(255,122,61,.35)}
+.sel svg{width:16px;height:24px}
+.txt{position:absolute}
+.pre{margin-top:22px;font-weight:700;letter-spacing:.04em;color:rgba(235,228,212,.85)}
+h1{font-weight:900;line-height:.92;letter-spacing:-.035em;text-transform:uppercase;margin-top:18px}
+h1 em{font-style:normal;color:var(--vivo);text-shadow:0 0 36px rgba(255,122,61,.5)}
+.sub{margin-top:20px;font-weight:600;color:rgba(235,228,212,.82);line-height:1.3}
+.preco{display:flex;align-items:flex-end;gap:16px}
+.preco small{font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:rgba(235,228,212,.8);line-height:1.2}
+.preco b{font-weight:900;letter-spacing:-.04em;line-height:.8}
+.preco b sup{font-size:.36em;vertical-align:top;position:relative;top:.2em;margin-right:6px;letter-spacing:0}
+.nota{margin-top:16px;font-weight:700;color:rgba(235,228,212,.75)}
+.nota s{text-decoration-color:var(--vivo);text-decoration-thickness:3px}
+.nota b{color:var(--vivo)}
+/* cartões de produto */
+.p{position:absolute;border-radius:24px;overflow:hidden;border:2px solid rgba(255,255,255,.16);box-shadow:0 26px 50px rgba(0,0,0,.6);background:#D2561F}
+.p .art{position:absolute;top:0;bottom:0;right:0;width:56%;overflow:hidden}
+.p .art img{width:100%;height:100%;object-fit:cover;object-position:100% 50%}
+.p .vel{position:absolute;top:0;bottom:0;right:0;width:56%;background:linear-gradient(90deg,#D2561F 0%,rgba(210,86,31,0) 35%)}
+.p .t{position:absolute;left:0;top:0;bottom:0;padding:22px 24px;display:flex;flex-direction:column;justify-content:space-between;width:70%}
+.p .k{font-size:13px;font-weight:900;letter-spacing:.18em;text-transform:uppercase;color:#FFE3CF}
+.p h3{font-family:Georgia,"Times New Roman",serif;font-weight:400;line-height:1;letter-spacing:-.02em;color:#FFF6EC}
+.p h3 i{display:block;font-size:.55em;margin-top:8px;letter-spacing:0;color:#FFE3CF}
+.p .c{display:inline-block;align-self:flex-start;background:#000;color:var(--creme);font-weight:800;font-size:14px;letter-spacing:.06em;padding:7px 13px;border-radius:99px;white-space:nowrap}
+.p.b{background:linear-gradient(135deg,#1c2f7a,#0c1a52)}
+.p.b .vel{display:none}
+.p.b .art{right:auto;left:0;width:47%}.p.b .art img{width:auto;height:100%;max-width:none;margin-left:-40px}
+.p.b .t{left:auto;right:0;width:53%;padding:22px 20px 22px 6px}.p.b h3{font-size:34px}
+.p.b .k{color:#FFB88C}
+.p.b h3{color:#fff}
+.p.b h3 i{color:#C9D6FF}
+/* desktop */
+.d .txt{left:80px;top:62px;width:640px}
+.d .sel{font-size:22px}
+.d .pre{font-size:24px}
+.d h1{font-size:76px}
+.d .sub{font-size:23px;max-width:560px}
+.d .preco{margin-top:26px}.d .preco small{font-size:20px;padding-bottom:12px}.d .preco b{font-size:132px}
+.d .nota{font-size:21px}
+.d .p{width:370px;height:300px}
+.d .p h3{font-size:42px}.d .p.b h3{font-size:30px}.d .p .c{font-size:13px;padding:7px 11px}
+.d .p1{left:760px;top:60px;transform:rotate(-2deg)}
+.d .p2{left:1150px;top:60px;transform:rotate(2deg)}
+.d .p3{left:760px;top:390px;transform:rotate(2deg)}
+.d .p4{left:1150px;top:390px;transform:rotate(-2deg)}
+/* celular */
+.m .txt{left:56px;right:56px;top:54px}
+.m .sel{font-size:26px}
+.m .pre{font-size:28px}
+.m h1{font-size:84px}
+.m .sub{font-size:28px}
+.m .preco{margin-top:26px}.m .preco small{font-size:22px;padding-bottom:12px}.m .preco b{font-size:140px}
+.m .nota{font-size:24px}
+.m .p{width:400px;height:330px}
+.m .p h3{font-size:42px}
+.m .p.b .art{width:46%}.m .p.b .art img{margin-left:-50px}.m .p.b h3{font-size:36px}.m .p1{left:40px;top:760px;transform:rotate(-2deg)}
+.m .p2{left:460px;top:760px;transform:rotate(2deg)}
+.m .p3{left:40px;top:1120px;transform:rotate(2deg)}
+.m .p4{left:460px;top:1120px;transform:rotate(-2deg)}
+
+.d h1{font-size:104px;line-height:.9}.m h1{font-size:120px}
+.d .nota{font-size:26px}.m .nota{font-size:30px}
+.d .sel{font-size:24px}.m .sel{font-size:28px}
+.d .p h3{font-size:56px}.d .p.b h3{font-size:38px}
+.m .p h3{font-size:50px}.m .p.b h3{font-size:40px}
+.d .p .c,.m .p .c{font-size:18px;padding:9px 15px}
+.d .txt{top:80px}
+
+.d h1{font-size:90px;white-space:nowrap}.m h1{font-size:104px;white-space:nowrap}
+.d .p h3{font-size:46px}.d .p.b h3{font-size:31px}
+.m .p h3{font-size:44px}.m .p.b h3{font-size:34px}
+.p .art{width:46%}
+.d .p.b .art{width:44%}.d .p.b .art img{margin-left:-48px}
+.p.b .t{width:55%}
+</style></head><body>
+<svg width="0" height="0" style="position:absolute"><defs>
+<symbol id="b" viewBox="0 0 64 100"><path d="M40 0 4 56h22L18 100 60 40H36z" fill="#FF7A3D" stroke="#FFD2B8" stroke-width="3" stroke-linejoin="round"/></symbol></defs></svg>
+
+<div class="arte d" id="d">
+ <svg class="raio" style="right:36px;top:14px;width:70px;transform:rotate(12deg)"><use href="#b"/></svg>
+ <svg class="raio" style="left:690px;top:360px;width:60px;transform:rotate(-14deg)"><use href="#b"/></svg>
+ <div class="txt">
+  <span class="sel"><svg viewBox="0 0 64 100"><path d="M40 0 4 56h22L18 100 60 40H36z" fill="#000"/></svg>Super promoção de eleição</span>
+    <h1>4 produtos<br><em>1 preço</em></h1>
+    <div class="preco"><small>os 4<br>por só</small><b><sup>R$</sup>19,90</b></div>
+  <div class="nota"><s>Separados: R$ 497,00</s></div>
+ </div>
+ <div class="p p1"><div class="art"><img src="../img/ws/m1.webp"></div><div class="vel"></div><div class="t"><span class="k">Curso 1</span><h3>Websites<br>com Claude</h3><span class="c">18 módulos</span></div></div>
+ <div class="p p2"><div class="art"><img src="../img/modulo-1.webp" style="object-position:100% 50%"></div><div class="vel"></div><div class="t"><span class="k">Curso 2</span><h3>Editor<br>com Claude</h3><span class="c">70 aulas</span></div></div>
+ <div class="p p3"><div class="art"><img src="../img/vi/m4.webp" style="object-position:100% 50%"></div><div class="vel"></div><div class="t"><span class="k">Curso 3</span><h3>Vídeos<br>com IA</h3><span class="c">50 aulas</span></div></div>
+ <div class="p p4 b"><div class="art"><img src="../img/fp/a1.webp"></div><div class="vel"></div><div class="t"><span class="k">Bônus</span><h3>Fábrica de<br>Personagens</h3><span class="c">13 aulas</span></div></div>
+</div>
+
+<div class="arte m" id="m" style="margin-top:40px">
+ <svg class="raio" style="right:40px;top:20px;width:80px;transform:rotate(12deg)"><use href="#b"/></svg>
+ <div class="txt">
+  <span class="sel"><svg viewBox="0 0 64 100"><path d="M40 0 4 56h22L18 100 60 40H36z" fill="#000"/></svg>Super promoção de eleição</span>
+    <h1>4 produtos<br><em>1 preço</em></h1>
+    <div class="preco"><small>os 4<br>por só</small><b><sup>R$</sup>19,90</b></div>
+  <div class="nota"><s>Separados: R$ 497,00</s></div>
+ </div>
+ <div class="p p1"><div class="art"><img src="../img/ws/m1.webp"></div><div class="vel"></div><div class="t"><span class="k">Curso 1</span><h3>Websites<br>com Claude</h3><span class="c">18 módulos</span></div></div>
+ <div class="p p2"><div class="art"><img src="../img/modulo-1.webp" style="object-position:100% 50%"></div><div class="vel"></div><div class="t"><span class="k">Curso 2</span><h3>Editor<br>com Claude</h3><span class="c">70 aulas</span></div></div>
+ <div class="p p3"><div class="art"><img src="../img/vi/m4.webp" style="object-position:100% 50%"></div><div class="vel"></div><div class="t"><span class="k">Curso 3</span><h3>Vídeos<br>com IA</h3><span class="c">50 aulas</span></div></div>
+ <div class="p p4 b"><div class="art"><img src="../img/fp/a1.webp"></div><div class="vel"></div><div class="t"><span class="k">Bônus</span><h3>Fábrica de<br>Personagens</h3><span class="c">13 aulas</span></div></div>
+</div>
+<script>if(location.hash==="#m"){document.getElementById("d").style.display="none";document.getElementById("m").style.marginTop="0"}if(location.hash==="#d"){document.getElementById("m").style.display="none"}</script>
+</body></html>

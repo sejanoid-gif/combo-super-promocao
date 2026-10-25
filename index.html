@@ -18,8 +18,6 @@ html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
 body{background:var(--fundo);color:var(--tinta);font-family:"Inter",system-ui,sans-serif;line-height:1.45;min-height:100vh}
 a{color:inherit}img{display:block;max-width:100%}
 .casca{max-width:1080px;margin:0 auto;padding:0 var(--lado)}
-.faixa{background:linear-gradient(90deg,#D9501F,#FF7A3D,#D9501F);color:#000;text-align:center;font-weight:800;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;padding:7px var(--lado);display:flex;gap:8px;align-items:center;justify-content:center}
-.faixa svg{width:11px;height:16px;flex:none}
 .topo{position:sticky;top:0;z-index:20;background:rgba(0,0,0,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--linha)}
 .topo .casca{display:flex;align-items:center;gap:10px;height:56px}
 .topo .logo{width:36px;height:36px;flex:none}
@@ -38,13 +36,13 @@ h1{font-size:30px;line-height:1.08;letter-spacing:-.025em;font-weight:750;margin
 .preco strong{font-size:34px;color:var(--tinta);font-weight:750;letter-spacing:-.02em}
 .selos{display:flex;flex-wrap:wrap;gap:8px 16px;margin-top:14px;font-size:13px;color:var(--tinta-2)}
 .selos span{display:inline-flex;align-items:center;gap:6px}.selos svg{width:16px;height:16px;flex:none}
-.cont{padding:30px 0 6px;scroll-margin-top:64px}
+.cont{padding:44px 0 6px;scroll-margin-top:64px}
 .cont h2.t0{font-size:24px;letter-spacing:-.02em;font-weight:730}
 .cont .sub0{color:var(--tinta-3);font-size:14px;margin:4px 0 4px}
-.prod{padding:26px 0 4px}
+.prod{padding:34px 0 4px}
 .prod h2{font-size:22px;letter-spacing:-.02em;font-weight:720;margin-top:2px}
-.prod .sub{color:var(--tinta-3);font-size:14px;margin:3px 0 14px}
-.grade{display:grid;grid-template-columns:1fr;gap:16px}
+.prod .sub{color:var(--tinta-3);font-size:14px;margin:4px 0 18px}
+.grade{display:grid;grid-template-columns:1fr;gap:18px}
 .mod-caixa{background:var(--cartao);border:1px solid var(--linha);border-radius:var(--raio);overflow:hidden}
 .mod-caixa[hidden]{display:none}
 .mod{background:none;border:0;text-align:left;color:inherit;font:inherit;cursor:pointer;display:block;width:100%;padding:0}
@@ -70,7 +68,7 @@ h1{font-size:30px;line-height:1.08;letter-spacing:-.025em;font-weight:750;margin
 .aulas li svg{width:15px;height:15px;flex:none;margin-top:3px;color:var(--tinta-3)}
 .aulas li b{color:var(--tinta-3);font-weight:600;font-variant-numeric:tabular-nums;min-width:30px}
 .aulas.desc-m{padding:12px 14px;font-size:14px;color:var(--tinta-2)}
-.todos{margin-top:14px;width:100%;background:none;border:1.5px dashed rgba(217,119,87,.6);border-radius:var(--raio);color:var(--laranja);font:inherit;font-weight:650;font-size:15px;padding:14px;cursor:pointer}
+.todos{margin-top:18px;width:100%;background:none;border:1.5px dashed rgba(217,119,87,.6);border-radius:var(--raio);color:var(--laranja);font:inherit;font-weight:650;font-size:15px;padding:14px;cursor:pointer}
 .fim{background:var(--cartao);border:1px solid var(--linha);border-radius:var(--raio);padding:22px 18px;margin:30px 0 36px;text-align:center}
 .fim h2{font-size:21px;letter-spacing:-.02em;margin-bottom:6px}.fim p{color:var(--tinta-2);font-size:15px;margin-bottom:16px}
 .rodape{color:var(--tinta-3);font-size:12.5px;text-align:center;padding:0 0 110px}
@@ -87,6 +85,89 @@ h1{font-size:30px;line-height:1.08;letter-spacing:-.025em;font-weight:750;margin
 }
 @media (min-width:1000px){.grade{grid-template-columns:repeat(3,1fr)}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+/* promoção relâmpago: agressivo */
+.faixa{background:repeating-linear-gradient(-45deg,#FF7A3D 0 18px,#E8561F 18px 36px);color:#000;font-weight:900;font-size:13px;letter-spacing:.12em;text-transform:uppercase;overflow:hidden;white-space:nowrap;padding:8px 0;display:block}
+.faixa .trilho{display:inline-flex;animation:corre 28s linear infinite;will-change:transform}
+.faixa .trilho span{padding-right:0}
+@keyframes corre{to{transform:translateX(-50%)}}
+.heroa{position:relative;margin-top:14px;padding:28px 16px 24px;border-radius:20px;overflow:hidden;text-align:center;
+  background:radial-gradient(70% 55% at 50% 0%,rgba(255,122,61,.5),transparent 70%),repeating-linear-gradient(115deg,rgba(255,255,255,.035) 0 30px,transparent 30px 70px),#070707;
+  border:2px solid rgba(255,122,61,.6);box-shadow:0 0 0 1px #000,0 0 60px rgba(255,122,61,.25)}
+.selo-e{display:inline-flex;align-items:center;gap:10px;background:#FF7A3D;color:#000;font-weight:900;font-size:14px;letter-spacing:.1em;text-transform:uppercase;padding:10px 16px 10px 12px;border-radius:10px;box-shadow:0 8px 28px rgba(255,122,61,.4)}
+.selo-e svg{width:12px;height:18px}
+.heroa h1{white-space:nowrap;font-size:clamp(52px,16.5vw,120px);line-height:.97;letter-spacing:-.045em;text-transform:uppercase;font-weight:900;margin:20px 0 16px}
+.heroa h1 em{font-style:normal;color:#FF7A3D;text-shadow:0 0 40px rgba(255,122,61,.6)}
+.preco-g{display:flex;align-items:flex-end;justify-content:center;gap:14px;margin:12px 0 30px}
+.preco-g s{font-size:clamp(14px,3.8vw,24px);font-weight:800;color:rgba(235,228,212,.7);text-decoration-color:#FF7A3D;text-decoration-thickness:3px;padding-bottom:10px;white-space:nowrap}
+.preco-g b{font-size:clamp(54px,17vw,128px);font-weight:900;letter-spacing:-.05em;line-height:.82;color:#FFF3E6;text-shadow:0 0 30px rgba(255,122,61,.45)}
+.preco-g b sup{font-size:.34em;vertical-align:top;position:relative;top:.2em;margin-right:4px;letter-spacing:0}
+.timer{background:#000;border:2px solid #FF7A3D;border-radius:16px;padding:16px 14px 18px;margin:0 auto 24px;max-width:520px;box-shadow:inset 0 0 30px rgba(255,122,61,.18)}
+.timer .lbl{font-size:12.5px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:#FF7A3D;margin-bottom:12px}
+.timer .dig{display:flex;align-items:center;justify-content:center;gap:8px}
+.timer .dig>div{background:linear-gradient(180deg,#2a1710,#120b08);border:1px solid rgba(255,122,61,.5);border-radius:12px;min-width:76px;padding:8px 6px 6px}
+.timer .dig b{display:block;font-size:clamp(38px,12vw,60px);font-weight:900;letter-spacing:-.02em;line-height:1;font-variant-numeric:tabular-nums;color:#FFF3E6}
+.timer .dig small{font-size:10px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:rgba(235,228,212,.6)}
+.timer .dig i{font-style:normal;font-size:36px;font-weight:900;color:#FF7A3D;animation:pisca 1s steps(2,start) infinite}
+@keyframes pisca{50%{opacity:.25}}
+.timer .trilha{height:8px;border-radius:99px;background:rgba(255,255,255,.1);margin-top:12px;overflow:hidden}
+.timer .trilha i{display:block;height:100%;width:100%;background:linear-gradient(90deg,#E8561F,#FFB347);border-radius:99px;transition:width 1s linear}
+#compra .btn--g{animation:pulsa 1.6s ease-in-out infinite;font-size:19px;padding:18px 20px}
+@keyframes pulsa{0%,100%{box-shadow:0 8px 24px rgba(255,122,61,.35),0 0 0 0 rgba(255,122,61,.5)}50%{box-shadow:0 8px 34px rgba(255,122,61,.6),0 0 0 12px rgba(255,122,61,0)}}
+.heroa .selos{justify-content:center;margin-top:18px}
+.encerrada{background:#000;border:2px dashed rgba(235,228,212,.4);border-radius:16px;padding:22px 14px;margin:14px auto;max-width:520px}
+.encerrada b{display:block;font-size:30px;font-weight:900;text-transform:uppercase;letter-spacing:-.01em}
+.encerrada span{color:var(--tinta-2);font-size:15px}
+.quatro{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:32px;text-align:left}
+.qc{position:relative;border-radius:16px;overflow:hidden;aspect-ratio:1/.92;background:#D2561F;border:1.5px solid rgba(255,255,255,.18);box-shadow:0 14px 30px rgba(0,0,0,.5)}
+.qc img{position:absolute;top:0;bottom:0;right:0;width:52%;height:100%;object-fit:cover;object-position:100% 50%}
+.qc::after{content:"";position:absolute;top:0;bottom:0;right:0;width:52%;background:linear-gradient(90deg,#D2561F 0%,rgba(210,86,31,0) 40%)}
+.qc div{position:absolute;left:0;top:0;bottom:0;width:68%;z-index:2;padding:12px;display:flex;flex-direction:column;justify-content:space-between}
+.qc small{font-size:10px;font-weight:900;letter-spacing:.16em;text-transform:uppercase;color:#FFE3CF}
+.qc b{font-family:Georgia,"Times New Roman",serif;font-weight:400;font-size:clamp(19px,5.6vw,30px);line-height:1;letter-spacing:-.02em;color:#FFF6EC}
+.qc span{align-self:flex-start;background:#000;color:var(--tinta);font-size:11px;font-weight:800;letter-spacing:.05em;padding:5px 9px;border-radius:99px}
+.qc4{background:#12246d;border-color:rgba(255,255,255,.18)}
+.qc4::after{display:none}
+.qc4 img{left:0;right:auto;width:44%;object-fit:cover;object-position:0 50%}
+.qc4 div{left:auto;right:0;width:56%;padding-left:6px}
+.qc4 small{color:#FFB88C}.qc4 b{color:#fff;font-size:clamp(13px,3.4vw,19px)}
+@media (min-width:720px){
+  .heroa{padding:30px 34px 28px}
+  .quatro{grid-template-columns:repeat(4,1fr)}
+  .qc{aspect-ratio:1/1.05}
+  .selo-e{font-size:17px}
+  .timer .dig>div{min-width:96px}
+}
+@media (prefers-reduced-motion:reduce){.faixa .trilho,.timer .dig i,#compra .btn--g{animation:none!important}}
+
+.kick{font-size:12px;font-weight:900;letter-spacing:.18em;text-transform:uppercase;color:#FF7A3D;margin-bottom:6px}
+.leva{padding:46px 0 0}
+.leva .t0,.cont .t0{font-size:clamp(26px,7vw,38px);letter-spacing:-.03em;font-weight:850;line-height:1.05;margin-bottom:18px}
+.quatro{margin-top:0}
+.qc{display:block;text-decoration:none;color:inherit;aspect-ratio:1/1}
+.qc b{font-size:clamp(22px,6.6vw,34px)}
+.qc .st{display:flex;flex-direction:column;gap:5px;align-items:flex-start;background:none;padding:0;border-radius:0}
+.qc .st i{font-style:normal;background:#000;color:var(--tinta);font-size:12px;font-weight:800;letter-spacing:.04em;padding:5px 10px;border-radius:99px}
+.qc4 b{font-size:clamp(16px,4.2vw,20px)}
+.total{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:14px}
+.total>div{background:linear-gradient(180deg,#1b110c,#111);border:1px solid rgba(255,122,61,.4);border-radius:14px;padding:14px 8px;text-align:center}
+.total b{display:block;font-size:34px;font-weight:900;letter-spacing:-.03em;color:#FF7A3D;line-height:1}
+.total small{display:block;margin-top:5px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--tinta-2)}
+.prod .sub{display:flex;flex-wrap:wrap;gap:8px}
+.prod .sub i{font-style:normal;background:#1c1c1c;border:1px solid var(--linha);color:var(--tinta);font-size:13px;font-weight:700;padding:6px 12px;border-radius:99px}
+.prod{border-top:1px solid var(--linha);margin-top:30px;padding-top:34px;scroll-margin-top:70px}
+.prod:first-of-type{border-top:0;margin-top:0}
+.mini-t{font-size:20px;font-weight:800;color:var(--tinta);margin:4px 0 12px;font-variant-numeric:tabular-nums}
+.mini-t b{background:#000;border:1px solid rgba(255,122,61,.5);border-radius:8px;padding:3px 7px;color:#FFF3E6}
+.barra div b{display:inline;font-size:14px;color:#FF7A3D;font-variant-numeric:tabular-nums}
+.fim{border:2px solid rgba(255,122,61,.55);background:radial-gradient(80% 90% at 50% 0,rgba(255,122,61,.25),transparent 70%),#111;box-shadow:0 0 40px rgba(255,122,61,.15)}
+.fim .kick{margin-bottom:8px}
+@media (min-width:720px){
+  .quatro{grid-template-columns:repeat(2,1fr)}
+  .qc{aspect-ratio:16/8}
+  .total{grid-template-columns:repeat(4,1fr)}
+}
+@media (min-width:1000px){.quatro{grid-template-columns:repeat(4,1fr)}.qc{aspect-ratio:1/1.05}}
 </style>
 </head>
 <body>
@@ -98,47 +179,73 @@ h1{font-size:30px;line-height:1.08;letter-spacing:-.025em;font-weight:750;margin
 <symbol id="i-phone" viewBox="0 0 16 16"><g fill="none" stroke="currentColor" stroke-width="1.3"><rect x="4.5" y="1.8" width="7" height="12.4" rx="1.6"/><path d="M7 12h2" stroke-linecap="round"/></g></symbol>
 </defs></svg>
 
-<div class="faixa"><svg viewBox="0 0 64 100"><path d="M40 0 4 56h22L18 100 60 40H36z" fill="#000"/></svg>Promoção relâmpago · só hoje · R$ 19,90<svg viewBox="0 0 64 100"><path d="M40 0 4 56h22L18 100 60 40H36z" fill="#000"/></svg></div>
+<div class="faixa" id="faixa"><div class="trilho"><span>⚡ SUPER PROMOÇÃO DE ELEIÇÃO ⚡ SÓ HOJE ⚡ R$ 19,90 ⚡ OFERTA RELÂMPAGO ⚡ SUPER PROMOÇÃO DE ELEIÇÃO ⚡ SÓ HOJE ⚡ R$ 19,90 ⚡ OFERTA RELÂMPAGO </span><span aria-hidden="true">⚡ SUPER PROMOÇÃO DE ELEIÇÃO ⚡ SÓ HOJE ⚡ R$ 19,90 ⚡ OFERTA RELÂMPAGO ⚡ SUPER PROMOÇÃO DE ELEIÇÃO ⚡ SÓ HOJE ⚡ R$ 19,90 ⚡ OFERTA RELÂMPAGO </span></div></div>
 <header class="topo"><div class="casca">
 <img class="logo" src="img/logo.svg" alt="" width="36" height="36"><b>Combo Relâmpago</b>
-<a class="btn btn--p" href="https://pay.hotmart.com/D108182279I?off=tngsk17e">Comprar</a>
+<a class="btn btn--p" id="btn-topo" href="https://pay.hotmart.com/D108182279I?off=tngsk17e">Comprar</a>
 </div></header>
 
 <main class="casca">
-<div class="capa"><picture><source media="(min-width:720px)" srcset="img/promo-pc.webp"><img src="img/promo-celular.webp" alt="Promoção relâmpago: 4 produtos por R$ 19,90. Websites com Claude, Masterclass Editor com Claude, Masterclass de Vídeos com IA e o bônus Fábrica de Personagens." width="800" height="1156" fetchpriority="high"></picture></div>
-<div class="topo2">
-<section class="cabeca">
-<div class="etq">Super promoção de eleição</div>
-<h1>Leve os 4 por <span style="white-space:nowrap">R$ 19,90</span></h1>
-<p class="desc">3 cursos e 1 bônus por um preço único, só durante a promoção relâmpago. Veja por dentro de cada produto, logo abaixo, antes de decidir.</p>
+<section class="heroa" id="hero">
+  <div class="selo-e"><svg viewBox="0 0 64 100"><path d="M40 0 4 56h22L18 100 60 40H36z" fill="#000"/></svg>Super promoção de eleição</div>
+  <h1>Leve os 4<br><em>só hoje</em></h1>
+  <div class="vivo" id="vivo">
+    <div class="preco-g"><s>R$ 497,00</s><b><sup>R$</sup>19,90</b></div>
+    <div class="timer" role="timer" aria-live="off">
+      <div class="lbl">⚡ A oferta acaba hoje às 23:59 ⚡</div>
+      <div class="dig">
+        <div><b class="t-h">00</b><small>horas</small></div><i>:</i>
+        <div><b class="t-m">00</b><small>min</small></div><i>:</i>
+        <div><b class="t-s">00</b><small>seg</small></div>
+      </div>
+      <div class="trilha"><i id="t-barra"></i></div>
+    </div>
+    <div id="compra">
+      <a class="btn btn--g" id="btn-hero" href="https://pay.hotmart.com/D108182279I?off=tngsk17e">⚡ Quero os 4 por R$ 19,90</a>
+      <div class="selos">
+        <span><svg><use href="#i-shield"/></svg>7 dias de garantia</span>
+        <span><svg><use href="#i-file"/></svg>Pagamento pela Hotmart</span>
+        <span><svg><use href="#i-phone"/></svg>Acesso na hora</span>
+      </div>
+    </div>
+  </div>
+  <div class="encerrada" id="encerrada" hidden>
+    <b>Oferta encerrada</b>
+    <span>A promoção relâmpago acabou às 23:59 de 25/10.</span>
+  </div>
 </section>
-<aside class="compra" id="compra">
-<div class="preco"><s>Os 4 separados: R$ 497,00</s><br>Super promoção · só hoje<br><strong>R$ 19,90</strong> à vista</div>
-<a class="btn btn--g" href="https://pay.hotmart.com/D108182279I?off=tngsk17e">⚡ Quero os 4 por R$ 19,90</a>
-<div class="selos">
-<span><svg><use href="#i-shield"/></svg>7 dias de garantia</span>
-<span><svg><use href="#i-file"/></svg>Pagamento pela Hotmart</span>
-<span><svg><use href="#i-phone"/></svg>Acesso na hora, no celular</span>
+
+<section class="leva">
+<div class="kick">O que você leva</div>
+<h2 class="t0">4 produtos. Tudo isso:</h2>
+<div class="quatro">
+  <a class="qc qc1" href="#p1"><img src="img/ws/m1.webp" alt=""><div><small>Curso 1</small><b>Websites<br>com Claude</b><span class="st"><i>18 módulos</i><i>34 conteúdos</i></span></div></a>
+  <a class="qc qc2" href="#p2"><img src="img/modulo-1.webp" alt=""><div><small>Curso 2</small><b>Editor<br>com Claude</b><span class="st"><i>13 módulos</i><i>70 aulas</i></span></div></a>
+  <a class="qc qc3" href="#p3"><img src="img/vi/m4.webp" alt=""><div><small>Curso 3</small><b>Vídeos<br>com IA</b><span class="st"><i>7 módulos</i><i>50 aulas</i></span></div></a>
+  <a class="qc qc4" href="#p4"><img src="img/fp/a1.webp" alt=""><div><small>Bônus</small><b>Fábrica de<br>Personagens</b><span class="st"><i>13 aulas</i></span></div></a>
 </div>
-</aside>
-</div>
+<div class="total"><div><b>38</b><small>módulos</small></div><div><b>167</b><small>aulas e conteúdos</small></div><div><b>4</b><small>produtos</small></div><div><b>7</b><small>dias de garantia</small></div></div>
+</section>
 
 <section class="cont">
-<h2 class="t0">Veja por dentro dos 4 produtos</h2>
-<div class="sub0">Toque num módulo para ver o que tem dentro</div>
+<div class="kick">Por dentro</div>
+<h2 class="t0">Veja cada um por dentro</h2>
+<div class="sub0">Toque num módulo para ver as aulas</div>
 <div id="prods"></div>
 </section>
 
 <section class="fim">
-<h2>⚡ Promoção relâmpago: R$ 19,90 · só hoje</h2>
-<p>Pagamento único. Se não for para você, os 7 dias de garantia devolvem o valor.</p>
+<div class="kick">Última chamada</div>
+<h2>⚡ R$ 19,90 · só hoje até 23:59</h2>
+<div class="mini-t">Acaba em <b class="t-h">00</b>:<b class="t-m">00</b>:<b class="t-s">00</b></div>
+<p>Pagamento único. 7 dias de garantia.</p>
 <a class="btn btn--g" href="https://pay.hotmart.com/D108182279I?off=tngsk17e">⚡ Quero os 4 por R$ 19,90</a>
 </section>
 <p class="rodape">Depois da compra, a Hotmart manda o acesso para o seu email. As aulas ficam na área de membros, que abre no celular.</p>
 </main>
 
 <div class="barra" id="barra" aria-hidden="true">
-<div>⚡ Relâmpago · só hoje<strong>R$ 19,90</strong></div>
+<div>⚡ Acaba em <b class="t-h">00</b>:<b class="t-m">00</b>:<b class="t-s">00</b><strong>R$ 19,90</strong></div>
 <a class="btn" style="background:linear-gradient(180deg,#FF8A4D,#E8561F)" href="https://pay.hotmart.com/D108182279I?off=tngsk17e">Comprar agora</a>
 </div>
 
@@ -149,8 +256,8 @@ const VISIVEIS = 3;
 const PLAY = '<span class="ico"><svg viewBox="0 0 16 16"><path d="M5 3.2v9.6L13 8 5 3.2Z" fill="currentColor"/></svg></span>';
 const alvo = document.getElementById('prods');
 PRODUTOS.forEach(p => {
-  const sec = document.createElement('section'); sec.className = 'prod';
-  sec.innerHTML = '<div class="etq">' + esc(p.k) + '</div><h2>' + esc(p.nome) + '</h2><div class="sub">' + esc(p.resumo) + ' · por dentro</div><div class="grade"></div>';
+  const sec = document.createElement('section'); sec.className = 'prod'; sec.id = 'p' + (PRODUTOS.indexOf(p) + 1);
+  sec.innerHTML = '<div class="etq">' + esc(p.k) + '</div><h2>' + esc(p.nome) + '</h2><div class="sub">' + p.resumo.split(' · ').map(x => '<i>' + esc(x) + '</i>').join('') + '</div><div class="grade"></div>';
   const grade = sec.querySelector('.grade');
   p.mods.forEach((m, i) => {
     const partes = m.titulo.split(/: (.+)/), assunto = partes[0], resto = partes[1];
@@ -186,6 +293,26 @@ PRODUTOS.forEach(p => {
   }
   alvo.appendChild(sec);
 });
+
+const FIM = Date.parse('2026-10-25T23:59:00-03:00'), INICIO = Date.parse('2026-10-25T00:00:00-03:00');
+const pad = n => String(n).padStart(2, '0');
+function tick() {
+  const r = FIM - Date.now();
+  if (r <= 0) {
+    document.getElementById('vivo').hidden = true;
+    document.getElementById('encerrada').hidden = false;
+    document.getElementById('faixa').hidden = true;
+    ['btn-topo','btn-hero'].forEach(i => { const e = document.getElementById(i); if (e) e.hidden = true; });
+    document.getElementById('barra').hidden = true;
+    clearInterval(iv); return;
+  }
+  const s = Math.floor(r / 1000);
+  document.querySelectorAll('.t-h').forEach(e => e.textContent = pad(Math.floor(s / 3600)));
+  document.querySelectorAll('.t-m').forEach(e => e.textContent = pad(Math.floor(s % 3600 / 60)));
+  document.querySelectorAll('.t-s').forEach(e => e.textContent = pad(s % 60));
+  document.getElementById('t-barra').style.width = Math.max(0, Math.min(100, r / (FIM - INICIO) * 100)) + '%';
+}
+const iv = setInterval(tick, 1000); tick();
 const barra = document.getElementById('barra'), compra = document.getElementById('compra');
 const atualiza = () => { const v = compra.getBoundingClientRect().bottom < 0; barra.classList.toggle('ver', v); barra.setAttribute('aria-hidden', String(!v)); };
 addEventListener('scroll', atualiza, {passive:true}); atualiza();
