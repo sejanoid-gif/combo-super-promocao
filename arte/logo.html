@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<style>
+@import url('../assets/fonts.css');
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#000;font-family:"Inter",sans-serif;color:#EBE4D4;width:1400px;padding:50px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.cx{background:#0c0c0c;border:1px solid rgba(255,255,255,.1);border-radius:24px;padding:50px;display:grid;place-items:center;height:420px}
+.cx.cl{background:#EBE4D4}
+.cx.lar{background:#D97757}
+.lg{display:flex;align-items:center;gap:26px}
+.ic{width:170px;height:170px;border-radius:38px;background:radial-gradient(90% 90% at 30% 20%,#FF9A5C,#D9501F 70%);position:relative;box-shadow:0 20px 50px rgba(255,122,61,.35),inset 0 2px 0 rgba(255,255,255,.35);display:grid;place-items:center;flex:none}
+.ic svg{width:92px;filter:drop-shadow(0 6px 10px rgba(0,0,0,.35))}
+.ic b{position:absolute;right:-12px;bottom:-12px;width:64px;height:64px;border-radius:50%;background:#000;color:#EBE4D4;font-size:38px;font-weight:900;display:grid;place-items:center;border:4px solid #EBE4D4}
+.tx{line-height:.9;font-weight:900;letter-spacing:-.04em;text-transform:uppercase}
+.tx span{display:block;font-size:84px}
+.tx em{display:block;font-style:normal;font-size:84px;color:#FF7A3D}
+.tx small{display:block;margin-top:14px;font-size:20px;font-weight:700;letter-spacing:.24em;color:rgba(235,228,212,.7)}
+.cl .tx,.cl .tx small{color:#000}.cl .tx em{color:#C9531F}.cl .tx small{color:rgba(0,0,0,.65)}
+.cl .ic b{border-color:#EBE4D4}
+.lar .tx em{color:#000}.lar .tx small{color:rgba(0,0,0,.7)}.lar .tx{color:#EBE4D4}
+.ap{display:flex;gap:30px;align-items:center}
+.ap .ic{width:120px;height:120px;border-radius:28px}.ap .ic svg{width:64px}.ap .ic b{width:46px;height:46px;font-size:26px;border-width:3px}
+.ap .ic.s{width:64px;height:64px;border-radius:15px}.ap .ic.s svg{width:34px}.ap .ic.s b{display:none}
+</style></head><body>
+<svg width="0" height="0" style="position:absolute"><defs>
+<symbol id="b" viewBox="0 0 64 100"><path d="M40 0 4 56h22L18 100 60 40H36z" fill="#FFF3E8"/></symbol></defs></svg>
+<div class="cx" id="a"><div class="lg"><div class="ic"><svg viewBox="0 0 64 100"><use href="#b"/></svg><b>4</b></div>
+ <div class="tx"><span>Combo</span><em>Relâmpago</em><small>4 PRODUTOS · 1 PREÇO</small></div></div></div>
+<div class="cx cl" id="b"><div class="lg"><div class="ic"><svg viewBox="0 0 64 100"><use href="#b"/></svg><b>4</b></div>
+ <div class="tx"><span>Combo</span><em>Relâmpago</em><small>4 PRODUTOS · 1 PREÇO</small></div></div></div>
+<div class="cx lar" id="c"><div class="lg"><div class="ic"><svg viewBox="0 0 64 100"><use href="#b"/></svg><b>4</b></div>
+ <div class="tx"><span>Combo</span><em>Relâmpago</em><small>4 PRODUTOS · 1 PREÇO</small></div></div></div>
+<div class="cx" id="d"><div class="ap"><div class="ic"><svg viewBox="0 0 64 100"><use href="#b"/></svg><b>4</b></div><div class="ic s"><svg viewBox="0 0 64 100"><use href="#b"/></svg></div></div></div>
+</body></html>

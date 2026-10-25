@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<style>
+@import url('../assets/fonts.css');
+:root{--lar:#D97757;--vivo:#FF7A3D;--creme:#EBE4D4}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#000;font-family:"Inter",sans-serif;color:var(--creme)}
+.arte{position:relative;overflow:hidden;background:
+ radial-gradient(60% 90% at 78% 45%,rgba(255,122,61,.55) 0%,rgba(217,119,87,.18) 45%,transparent 70%),
+ repeating-linear-gradient(115deg,rgba(255,255,255,.035) 0 38px,transparent 38px 90px),#050505}
+.d{width:1600px;height:700px}
+.m{width:900px;height:1300px}
+.raio{position:absolute;opacity:.9;filter:drop-shadow(0 0 24px rgba(255,122,61,.8))}
+.sel{display:inline-flex;align-items:center;gap:12px;background:var(--creme);color:#000;font-weight:800;letter-spacing:.14em;text-transform:uppercase;border-radius:999px;padding:12px 24px 12px 14px}
+.sel i{width:34px;height:34px;border-radius:50%;background:#000;display:grid;place-items:center}
+.sel svg{width:18px}
+h1{font-weight:900;line-height:.86;letter-spacing:-.04em;text-transform:uppercase}
+h1 span{display:block}
+.laranja{color:var(--vivo);text-shadow:0 0 40px rgba(255,122,61,.55)}
+.preco{display:flex;align-items:flex-end;gap:18px}
+.preco small{font-size:22px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(235,228,212,.75);line-height:1.2;padding-bottom:14px}
+.preco b{font-weight:900;letter-spacing:-.04em;line-height:.8}
+.preco b sup{font-size:.38em;vertical-align:top;margin-right:6px;position:relative;top:.18em;letter-spacing:0}
+.risco{font-weight:700;color:rgba(235,228,212,.7);text-decoration:line-through;text-decoration-thickness:3px;text-decoration-color:var(--vivo)}
+.card{position:absolute;border-radius:22px;overflow:hidden;background:#141414;border:2px solid rgba(255,255,255,.14);box-shadow:0 30px 60px rgba(0,0,0,.65),0 0 0 1px #000}
+.card img{width:100%;display:block;aspect-ratio:16/9;object-fit:cover}
+.card p{padding:12px 16px 14px;font-weight:800;font-size:19px;line-height:1.15;letter-spacing:-.01em}
+.card p em{display:block;font-style:normal;font-size:12px;letter-spacing:.16em;color:var(--lar);margin-bottom:3px;text-transform:uppercase}
+.card.b p em{color:#000;background:var(--vivo);display:inline-block;padding:2px 8px;border-radius:99px}
+/* desktop */
+.d .txt{position:absolute;left:84px;top:70px}
+.d h1{font-size:92px;margin-top:26px}
+.d .preco{margin-top:34px}.d .preco b{font-size:140px}
+.d .risco{font-size:26px;margin-top:34px}
+.d .card{width:300px}
+.d .c1{left:800px;top:120px;transform:rotate(-7deg)}
+.d .c2{left:1040px;top:60px;transform:rotate(-2deg);z-index:2}
+.d .c3{left:1290px;top:130px;transform:rotate(4deg);z-index:3}
+.d .c4{left:1010px;top:380px;transform:rotate(-3deg);z-index:4;width:360px}
+.d .r1{right:40px;top:20px;width:110px;transform:rotate(12deg)}
+.d .r2{left:760px;top:560px;width:90px;transform:rotate(-14deg)}
+.d .r3{left:60px;bottom:30px;width:70px;transform:rotate(8deg);opacity:.5}
+/* mobile */
+.m .txt{position:absolute;left:56px;right:56px;top:56px}
+.m h1{font-size:90px;margin-top:22px}
+.m .preco{margin-top:24px}.m .preco b{font-size:124px}
+.m .risco{font-size:24px;margin-top:30px}
+.m .card{width:380px}.m .card p{font-size:21px}
+.m .c1{left:40px;top:600px;transform:rotate(-3deg)}
+.m .c2{left:480px;top:600px;transform:rotate(3deg)}
+.m .c3{left:40px;top:900px;transform:rotate(2deg)}
+.m .c4{left:480px;top:900px;transform:rotate(-2deg)}
+.m .r1{right:40px;top:290px;width:120px;transform:rotate(12deg)}
+.m .r2{left:405px;top:1180px;width:90px;transform:rotate(-14deg)}
+</style></head><body>
+<svg width="0" height="0" style="position:absolute"><defs>
+<symbol id="b" viewBox="0 0 64 100"><path d="M40 0 4 56h22L18 100 60 40H36z" fill="#FF7A3D" stroke="#FFD2B8" stroke-width="3" stroke-linejoin="round"/></symbol>
+</defs></svg>
+
+<div class="arte d" id="d">
+ <svg class="raio r1"><use href="#b"/></svg><svg class="raio r2"><use href="#b"/></svg><svg class="raio r3"><use href="#b"/></svg>
+ <div class="txt">
+  <span class="sel"><i><svg viewBox="0 0 64 100"><path d="M40 0 4 56h22L18 100 60 40H36z" fill="#FF7A3D"/></svg></i>Promoção relâmpago</span>
+  <h1><span>4 produtos</span><span class="laranja">1 preço</span></h1>
+  <div class="preco"><small>só<br>hoje</small><b><sup>R$</sup>19,90</b></div>
+  <div class="risco">Os 4 separados: R$ 497,00</div>
+ </div>
+ <div class="card c1"><img src="../img/ws/m1.webp"><p><em>Curso 1</em>Websites com Claude</p></div>
+ <div class="card c2"><img src="../img/modulo-1.webp"><p><em>Curso 2</em>Masterclass Editor com Claude</p></div>
+ <div class="card c3"><img src="../img/vi/m4.webp"><p><em>Curso 3</em>Masterclass de Vídeos com IA</p></div>
+ <div class="card c4 b"><img src="../img/fp/a1.webp"><p><em>Bônus</em>Fábrica de Personagens</p></div>
+</div>
+
+<div class="arte m" id="m" style="margin-top:40px">
+ <svg class="raio r1"><use href="#b"/></svg><svg class="raio r2"><use href="#b"/></svg>
+ <div class="txt">
+  <span class="sel"><i><svg viewBox="0 0 64 100"><path d="M40 0 4 56h22L18 100 60 40H36z" fill="#FF7A3D"/></svg></i>Promoção relâmpago</span>
+  <h1><span>4 produtos</span><span class="laranja">1 preço</span></h1>
+  <div class="preco"><small>só<br>hoje</small><b><sup>R$</sup>19,90</b></div>
+  <div class="risco">Os 4 separados: R$ 497,00</div>
+ </div>
+ <div class="card c1"><img src="../img/ws/m1.webp"><p><em>Curso 1</em>Websites com Claude</p></div>
+ <div class="card c2"><img src="../img/modulo-1.webp"><p><em>Curso 2</em>Masterclass Editor</p></div>
+ <div class="card c3"><img src="../img/vi/m4.webp"><p><em>Curso 3</em>Vídeos com IA</p></div>
+ <div class="card c4 b"><img src="../img/fp/a1.webp"><p><em>Bônus</em>Fábrica de Personagens</p></div>
+</div>
+<script>if(location.hash==="#m"){document.getElementById("d").style.display="none";document.getElementById("m").style.marginTop="0"}if(location.hash==="#d"){document.getElementById("m").style.display="none"}</script></body></html>
